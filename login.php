@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Employee Management | Login Form</title>
+	<title>online desktop borrowing | Login Form</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- <style>
-		.loginMsg{
-	color: #fff;
-	background-color: rgb(0,230,10);
-	padding: 5px;
-	opacity: .8;
-}
-.errorMsg{
-	color: #fff;
-	background-color: rgb(230,0,10);
-	padding: 5px;
-	opacity: .9;
 
-}
-	</style> -->
 </head>
 <body>
 	<?php require 'header.php'; ?>
@@ -44,7 +30,7 @@
 								if($password==$row['password']){
 									$_SESSION['user_login']= $row['id'];
 									$loginMsg= "Successfully Login...";
-									header("refresh:2; select.php");
+									header("refresh:2; admin_index.php");
 								}else{
 									$errorMsg[]= "Wrong Password";
 								}
