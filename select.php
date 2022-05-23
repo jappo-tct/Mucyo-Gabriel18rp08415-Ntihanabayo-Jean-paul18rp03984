@@ -22,7 +22,7 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
           <th>Phone</th>
           <th>Reg.number</th>
           <th>Room</th>
-
+          <th>MACHINE</th>
           <th>Approve</th>
            <th>Action</th>
         </tr>
@@ -34,6 +34,7 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
             <td><?= $person->phone; ?></td>
             <td><?= $person->regno; ?></td>
             <td><?= $person->room; ?></td>
+            <td><?= $person->machine_name; ?></td>
           
             <td><?= $person->approve; ?></td>
             <td>
