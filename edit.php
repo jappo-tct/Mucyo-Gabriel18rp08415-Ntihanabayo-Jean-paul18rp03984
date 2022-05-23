@@ -11,17 +11,15 @@ if (isset ($_POST['name'])  && isset($_POST['lname'])  && isset($_POST['phone'])
   $phone = $_POST['phone'];
   $regno = $_POST['regno'];
   $room = $_POST['room'];
+  $machine_name = $_POST['machine_name'];
   $approve = $_POST['approve'];
-  $sql = 'UPDATE students SET name=:name, lname=:lname, phone=:phone, regno=:regno, room=:room, approve=:approve WHERE id=:id';
+  $sql = 'UPDATE students SET name=:name, lname=:lname, phone=:phone, regno=:regno, room=:room,machine_name=:machine_name, approve=:approve WHERE id=:id';
   $statement = $connection->prepare($sql);
-  if ($statement->execute([':name' => $name, ':lname' => $lname,':phone' => $phone,':regno' => $regno,':room' => $room,':approve' => $approve,':id' => $id])) {
-    header("Location: index.php");
+  if ($statement->execute([':name' => $name, ':lname' => $lname,':phone' => $phone,':regno' => $regno,':room' => $room,':machine_name' => $machine_name,':approve' => $approve,':id' => $id])) {
+    header("Location: select.php");
   }
 
 
-
-
-  
 
 }
 
@@ -59,6 +57,11 @@ if (isset ($_POST['name'])  && isset($_POST['lname'])  && isset($_POST['phone'])
         <div class="form-group">
           <label for="room">ROOM</label>
           <input type="text" value="<?= $person->room; ?>" name="room" id="room" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="room">MACHINE</label>
+          <input type="text" value="<?= $person->machine_name; ?>" name="machine_name" id="machine_name" class="form-control">
         </div>
         <div class="form-group">
           <label for="approve">APPROVE</label>
