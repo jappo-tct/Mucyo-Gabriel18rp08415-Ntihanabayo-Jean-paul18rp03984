@@ -6,6 +6,7 @@
         </div>
         <div class="card-body">
             <?php if(!empty($message)): ?>
+            
             <div class="alert alert-success">
             <?= $message; ?>
                 
