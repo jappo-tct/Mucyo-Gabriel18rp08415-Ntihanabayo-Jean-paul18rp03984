@@ -8,8 +8,10 @@ $person = $statement->fetch(PDO::FETCH_OBJ);
 if (isset ($_POST['name'])  && isset($_POST['lname'])  && isset($_POST['phone']) && isset($_POST['regno']) && isset($_POST['room']) && isset($_POST['approve'])) {
   $name = $_POST['name'];
   $lname = $_POST['lname'];
+  
   $phone = $_POST['phone'];
   $regno = $_POST['regno'];
+  
   $room = $_POST['room'];
   $machine_name = $_POST['machine_name'];
   $approve = $_POST['approve'];
