@@ -18,10 +18,12 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
           <th>NAMES</th>
           <th>REG.NUMBER</th>
           <th>ROOM</th>
+         
           
         </tr>
         <?php foreach($people as $person): ?>
           <tr>
+           
             <td><?= $person->id; ?></td>
             <td><?= $person->names; ?></td>
             <td><?= $person->regnumber; ?></td>
