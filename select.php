@@ -6,6 +6,7 @@ $statement->execute();
 $people = $statement->fetchAll(PDO::FETCH_OBJ);
  ?>
 <?php require 'header1.php'; ?>
+
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
